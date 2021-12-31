@@ -3,7 +3,14 @@ body {
 }
 
 #car {
-  max-width: 200px;
+  /* max-width: 200px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#car > img{
+  width: 200px;
 }
 
 .rotate90 {
