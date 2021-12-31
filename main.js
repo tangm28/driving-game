@@ -42,9 +42,15 @@ function engineSwitch(event) {
 }
 
 function on() {
-  data.coordinate.x++;
-  var x = data.coordinate.x;
-  $car.style.left = (x * 10) + 'px';
+  if (data.currentDirection === 'east') {
+    data.coordinate.x++;
+    var x = data.coordinate.x;
+    $car.style.left = (x * 10) + 'px';
+  } else if (data.currentDirection === 'south') {
+    data.coordinate.y++;
+    var y = data.coordinate.y;
+    $car.style.top = (y * 10) + 'px';
+  }
 }
 
 window.addEventListener('keydown', turn);
