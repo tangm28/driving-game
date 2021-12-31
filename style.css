@@ -2,6 +2,12 @@ body {
   background-color: green;
 }
 
+.container {
+  overflow: hidden;
+  position: relative;
+  height: 95vh;
+}
+
 #car {
   position: absolute;
 }

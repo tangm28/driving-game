@@ -6,10 +6,9 @@ var data = {
     y: 0,
   }
 }
-
+var $car = document.getElementById('car');
 var engineInterval;
 
-var $car = document.getElementById('car');
 function turn(event) {
   if (event.key === 'ArrowUp' || event.key === 'w') {
     $car.setAttribute('class', 'rotate270')
@@ -40,9 +39,21 @@ function engineSwitch(event) {
 }
 
 function on() {
-  data.coordinate.x++;
   var x = data.coordinate.x;
-  $car.style.left = (x * 10) + 'px';
+  var y = data.coordinate.y;
+  if (data.currentDirection === 'east') {
+    data.coordinate.x++;
+    $car.style.left = (x * 10) + 'px';
+  } else if (data.currentDirection === 'south') {
+    data.coordinate.y++;
+    $car.style.top = (y * 10) + 'px';
+  } else if (data.currentDirection === 'west') {
+    data.coordinate.x--;
+    $car.style.left = (x * 10) + 'px';
+  } else if (data.currentDirection === 'north') {
+    data.coordinate.y--;
+    $car.style.top = (y * 10) + 'px';
+  }
 }
 
 window.addEventListener('keydown', turn);
