@@ -42,14 +42,17 @@ function engineSwitch(event) {
 }
 
 function on() {
+  var x = data.coordinate.x;
+  var y = data.coordinate.y;
   if (data.currentDirection === 'east') {
     data.coordinate.x++;
-    var x = data.coordinate.x;
     $car.style.left = (x * 10) + 'px';
   } else if (data.currentDirection === 'south') {
     data.coordinate.y++;
-    var y = data.coordinate.y;
     $car.style.top = (y * 10) + 'px';
+  } else if (data.currentDirection === 'west') {
+    data.coordinate.x--;
+    $car.style.left = (x * 10) + 'px';
   }
 }
 
