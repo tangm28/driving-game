@@ -53,6 +53,9 @@ function on() {
   } else if (data.currentDirection === 'west') {
     data.coordinate.x--;
     $car.style.left = (x * 10) + 'px';
+  } else if (data.currentDirection === 'north') {
+    data.coordinate.y--;
+    $car.style.top = (y * 10) + 'px';
   }
 }
 
