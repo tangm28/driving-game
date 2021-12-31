@@ -35,13 +35,11 @@ function engineSwitch(event) {
   }
 }
 
-// function on() {
-//   data.coordinate.x++;
-//   var x = data.coordinate.x;
-//   console.log(x)
-//   $car.style.left = (x * 10) + 'px';
-// }
+function on() {
+  data.coordinate.x++;
+  var x = data.coordinate.x;
+  $car.style.left = (x * 10) + 'px';
+}
 
 window.addEventListener('keydown', turn);
 window.addEventListener('keydown', engineSwitch);
-// console.log();
