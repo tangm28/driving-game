@@ -6,10 +6,9 @@ var data = {
     y: 0,
   }
 }
-
+var $car = document.getElementById('car');
 var engineInterval;
 
-var $car = document.getElementById('car');
 function turn(event) {
   if (event.key === 'ArrowUp' || event.key === 'w') {
     $car.setAttribute('class', 'rotate270')
@@ -31,12 +30,10 @@ function engineSwitch(event) {
     if (data.engine === false) {
       data.engine = true;
       engineInterval = setInterval(on, 16);
-      console.log('go');
     } else {
       data.engine = false;
       clearInterval(engineInterval);
       engineInterval = null;
-      console.log('stop');
     }
   }
 }

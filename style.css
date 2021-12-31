@@ -2,9 +2,11 @@ body {
   background-color: green;
 }
 
-/* .container {
-  max-width: 2000px;
-} */
+.container {
+  overflow: hidden;
+  position: relative;
+  height: 95vh;
+}
 
 #car {
   position: absolute;
