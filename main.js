@@ -1,12 +1,19 @@
 var data = {
-  directions = [east, south, west, north],
-  currentDirection = east
+  currentDirection: 'east'
 }
 
 var $car = document.getElementById('car');
 function turn(event) {
-  var north = 270;
-  $car.setAttribute('class', 'column-full rotate' + north)
+  console.log(event.key);
+  if (event.key === 'ArrowUp' || event.key === 'w') {
+    $car.setAttribute('class', 'column-full rotate270')
+  } else if (event.key === 'ArrowRight' || event.key === 'd'){
+    $car.setAttribute('class', 'column-full')
+  } else if (event.key === 'ArrowDown' || event.key === 's') {
+    $car.setAttribute('class', 'column-full rotate90')
+  } else if (event.key === 'ArrowLeft' || event.key === 'a') {
+    $car.setAttribute('class', 'column-full rotate180')
+  }
 }
 
 window.addEventListener('keydown', turn);
