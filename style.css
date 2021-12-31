@@ -6,6 +6,14 @@ body {
   max-width: 200px;
 }
 
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate270 {
+  transform: rotate(-90deg);
+}
+
 .column-full {
   width: 100%;
 }
