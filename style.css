@@ -2,11 +2,12 @@ body {
   background-color: green;
 }
 
+/* .container {
+  max-width: 2000px;
+} */
+
 #car {
-  /* max-width: 200px; */
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 #car > img{
