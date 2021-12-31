@@ -26,14 +26,14 @@ function turn(event) {
   }
 }
 
-// function engineSwitch(event) {
-//   if (event.key === ' ') {
-//     if (data.engine === false) {
-//       data.engine = true;
-//       engineInterval = setInterval(on, 16);
-//     }
-//   }
-// }
+function engineSwitch(event) {
+  if (event.key === ' ') {
+    if (data.engine === false) {
+      data.engine = true;
+      engineInterval = setInterval(on, 16);
+    }
+  }
+}
 
 // function on() {
 //   data.coordinate.x++;
@@ -43,5 +43,5 @@ function turn(event) {
 // }
 
 window.addEventListener('keydown', turn);
-// window.addEventListener('keydown', engineSwitch);
+window.addEventListener('keydown', engineSwitch);
 // console.log();
